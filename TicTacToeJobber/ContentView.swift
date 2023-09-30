@@ -7,10 +7,12 @@ private let columns: [GridItem] = [
 ]
 
 struct ContentView: View {
+    @ObservedObject private var gameViewModel = GameViewModel()
+    
     var body: some View {
         LazyVGrid(columns: columns) {
             ForEach(0..<9) { index in
-                CellView(mark: index % 2 == 1 ? .cross : .cirle)
+                CellView(mark: gameViewModel.mark(for: index))
             }
         }
     }
