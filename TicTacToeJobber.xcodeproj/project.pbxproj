@@ -12,6 +12,8 @@
 		9842397C2AC8E35E009E8D7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9842397B2AC8E35E009E8D7D /* Assets.xcassets */; };
 		9842397F2AC8E35E009E8D7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9842397E2AC8E35E009E8D7D /* Preview Assets.xcassets */; };
 		984239862AC8E51D009E8D7D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 984239852AC8E51D009E8D7D /* README.md */; };
+		9842398A2AC8EA43009E8D7D /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239892AC8EA43009E8D7D /* CellView.swift */; };
+		9842398D2AC8EA7C009E8D7D /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842398C2AC8EA7C009E8D7D /* Mark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		9842397B2AC8E35E009E8D7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9842397E2AC8E35E009E8D7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		984239852AC8E51D009E8D7D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		984239892AC8EA43009E8D7D /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		9842398C2AC8EA7C009E8D7D /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				984239772AC8E35C009E8D7D /* TicTacToeJobberApp.swift */,
 				984239792AC8E35C009E8D7D /* ContentView.swift */,
+				9842398B2AC8EA6E009E8D7D /* Models */,
+				984239882AC8EA31009E8D7D /* Views */,
 				9842397B2AC8E35E009E8D7D /* Assets.xcassets */,
 				9842397D2AC8E35E009E8D7D /* Preview Content */,
 			);
@@ -68,6 +74,22 @@
 				9842397E2AC8E35E009E8D7D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		984239882AC8EA31009E8D7D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				984239892AC8EA43009E8D7D /* CellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9842398B2AC8EA6E009E8D7D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9842398C2AC8EA7C009E8D7D /* Mark.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9842398D2AC8EA7C009E8D7D /* Mark.swift in Sources */,
 				9842397A2AC8E35C009E8D7D /* ContentView.swift in Sources */,
 				984239782AC8E35C009E8D7D /* TicTacToeJobberApp.swift in Sources */,
+				9842398A2AC8EA43009E8D7D /* CellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
