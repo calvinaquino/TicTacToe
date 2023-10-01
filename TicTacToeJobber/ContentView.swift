@@ -11,7 +11,7 @@ struct ContentView: View {
     
     var body: some View {
         LazyVGrid(columns: columns) {
-            ForEach(0..<9) { index in
+            ForEach(Constants.boardRange, id: \.self) { index in
                 CellView(mark: gameViewModel.mark(for: index))
             }
         }

@@ -9,7 +9,7 @@ A basic TicTacToe App with leaderboard.
 - SwiftUI
 
 ## TODO:
-- [ ] board state
+- [x] board state
 - [ ] marking
 - [ ] leaderboard
 - [ ] reseting the board

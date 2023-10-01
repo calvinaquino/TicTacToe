@@ -4,7 +4,7 @@ import Foundation
 class GameViewModel: ObservableObject {
     
     /// The storage for all the marked indexes of the board. Has a size of 9
-    @Published var boardState: [Int] = Array(repeating: 0, count: 9)
+    @Published var boardState: [Int] = Array(repeating: 0, count: Constants.boardRange.count)
 }
 
 // MARK: - Game flow
