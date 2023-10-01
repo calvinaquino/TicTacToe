@@ -61,12 +61,8 @@ extension GameViewModel {
             return
         }
         // mark the cell
-        switch currentPlayer {
-        case .cross:
-            boardState[index] = 1
-        case .cirle:
-            boardState[index] = 2
-        }
+        // because marking and players share the same model, we can use currentPlayer raw value directly as a boardState value.
+        boardState[index] = currentPlayer.rawValue
         
         // toggle turn if there are still empty cells, else mark as finished
         let victorious = checkVictoryConditions(for: currentPlayer)
