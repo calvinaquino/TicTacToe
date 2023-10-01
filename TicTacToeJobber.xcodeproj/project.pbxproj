@@ -23,6 +23,9 @@
 		984239A62AC8FB55009E8D7D /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239A52AC8FB55009E8D7D /* Leaderboard.swift */; };
 		984239A92AC8FB87009E8D7D /* Leaderboard+Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239A82AC8FB87009E8D7D /* Leaderboard+Mark.swift */; };
 		984239AB2AC8FC02009E8D7D /* LeaderboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239AA2AC8FC02009E8D7D /* LeaderboardTests.swift */; };
+		984239AD2AC8FD9A009E8D7D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239AC2AC8FD9A009E8D7D /* Storage.swift */; };
+		984239AF2AC8FE63009E8D7D /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239AE2AC8FE63009E8D7D /* StorageTests.swift */; };
+		984239B22AC8FE82009E8D7D /* InMemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		984239A52AC8FB55009E8D7D /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		984239A82AC8FB87009E8D7D /* Leaderboard+Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Leaderboard+Mark.swift"; sourceTree = "<group>"; };
 		984239AA2AC8FC02009E8D7D /* LeaderboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTests.swift; sourceTree = "<group>"; };
+		984239AC2AC8FD9A009E8D7D /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		984239AE2AC8FE63009E8D7D /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
+		984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 				9842398E2AC8EB3F009E8D7D /* GameViewModel.swift */,
 				9842398C2AC8EA7C009E8D7D /* Mark.swift */,
 				984239A52AC8FB55009E8D7D /* Leaderboard.swift */,
+				984239AC2AC8FD9A009E8D7D /* Storage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,10 +145,12 @@
 		984239972AC8F199009E8D7D /* TicTacToeJobberTests */ = {
 			isa = PBXGroup;
 			children = (
+				984239B02AC8FE76009E8D7D /* Helper */,
 				9842399F2AC8F3C8009E8D7D /* BoardStateTests.swift */,
 				984239A12AC8F61D009E8D7D /* VictoryConditionsTests.swift */,
 				984239982AC8F199009E8D7D /* CellMarkingTests.swift */,
 				984239AA2AC8FC02009E8D7D /* LeaderboardTests.swift */,
+				984239AE2AC8FE63009E8D7D /* StorageTests.swift */,
 			);
 			path = TicTacToeJobberTests;
 			sourceTree = "<group>";
@@ -152,6 +161,14 @@
 				984239A82AC8FB87009E8D7D /* Leaderboard+Mark.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		984239B02AC8FE76009E8D7D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +281,7 @@
 				9842398A2AC8EA43009E8D7D /* CellView.swift in Sources */,
 				984239912AC8ECAA009E8D7D /* Constants.swift in Sources */,
 				984239A42AC8F9BC009E8D7D /* StatusMessageView.swift in Sources */,
+				984239AD2AC8FD9A009E8D7D /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +292,9 @@
 				984239A22AC8F61D009E8D7D /* VictoryConditionsTests.swift in Sources */,
 				984239AB2AC8FC02009E8D7D /* LeaderboardTests.swift in Sources */,
 				984239A02AC8F3C8009E8D7D /* BoardStateTests.swift in Sources */,
+				984239B22AC8FE82009E8D7D /* InMemoryStorage.swift in Sources */,
 				984239992AC8F199009E8D7D /* CellMarkingTests.swift in Sources */,
+				984239AF2AC8FE63009E8D7D /* StorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@ private let columns: [GridItem] = [
 
 struct ContentView: View {
     @ObservedObject private var gameViewModel = GameViewModel()
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         HStack {
@@ -33,6 +34,12 @@ struct ContentView: View {
             gameViewModel.reset()
         } label: {
             Text("Restart")
+        }
+        .onChange(of: scenePhase) { newPhase in
+            // Save the game state on background
+            if newPhase == .background {
+                gameViewModel.save()
+            }
         }
     }
 }

@@ -4,12 +4,12 @@ import XCTest
 final class BoardStateTests: XCTestCase {
     
     func testEmptyBoardIsNotFullyMarked() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         XCTAssertFalse(game.boardFullyMarked)
     }
     
     func testPartialBoardIsNotFullyMarked() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             0,0,1,
             0,2,0,
@@ -19,7 +19,7 @@ final class BoardStateTests: XCTestCase {
     }
     
     func testFullBoardIsFullyMarked() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             1,2,1,
             2,1,2,
@@ -29,7 +29,7 @@ final class BoardStateTests: XCTestCase {
     }
     
     func testReset() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             0,0,1,
             0,2,2,

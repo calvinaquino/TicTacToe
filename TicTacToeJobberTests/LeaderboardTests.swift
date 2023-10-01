@@ -4,7 +4,7 @@ import XCTest
 final class LeaderboardTests: XCTestCase {
     
     func testCircleWin() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.currentPlayer = .cirle
         game.boardState = [
             0,0,1,
@@ -17,7 +17,7 @@ final class LeaderboardTests: XCTestCase {
     }
     
     func testCrossWin() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.currentPlayer = .cross
         game.boardState = [
             0,0,1,
@@ -30,7 +30,7 @@ final class LeaderboardTests: XCTestCase {
     }
     
     func testDraw() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.currentPlayer = .cirle
         game.boardState = [
             2,2,1,

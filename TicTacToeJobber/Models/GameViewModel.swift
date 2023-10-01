@@ -2,6 +2,8 @@ import Foundation
 
 /// Manages game logic and flow
 class GameViewModel: ObservableObject {
+    /// Manages storing the game state between app sessions
+    let storage: Storage
     /// Keeps track of players scores
     var leaderboard = Leaderboard()
     /// The current player. If nil, there is no game ongoing.
@@ -11,6 +13,16 @@ class GameViewModel: ObservableObject {
     var winner: Mark? = nil
     /// The storage for all the marked indexes of the board. Has a size of 9
     @Published var boardState: [Int] = Array(repeating: 0, count: Constants.boardRange.count)
+    
+    /// Initializes the Game View Model object with an optional Storage.
+    ///
+    /// - Parameter storage: Optional. Defaults to a local implementation that uses UserDefaults
+    init(storage: Storage = LocalStorage()) {
+        self.storage = storage
+        self.leaderboard = storage.loadLeaderboard()
+        self.currentPlayer = storage.loadCurrentPlayer()
+        self.boardState = storage.loadBoardState()
+    }
 }
 
 // MARK: - State checking functions
@@ -85,5 +97,12 @@ extension GameViewModel {
     func reset() {
         boardState = Array(repeating: 0, count: 9)
         currentPlayer = .cross
+    }
+    
+    /// Stores leaderboard, current player and board state into the User Defaults
+    func save() {
+        storage.saveLeaderboard(leaderboard: leaderboard)
+        storage.saveCurrentPlayer(player: currentPlayer)
+        storage.saveBoardState(state: boardState)
     }
 }

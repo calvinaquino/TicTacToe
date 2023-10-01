@@ -15,5 +15,5 @@ A basic TicTacToe App with leaderboard.
 - [x] winning conditions
 - [x] game messages
 - [x] leaderboard
-- [ ] Persist between app sessions
+- [x] Persist between app sessions
 - [ ] Improve UI

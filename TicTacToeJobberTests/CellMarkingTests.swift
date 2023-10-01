@@ -4,14 +4,14 @@ import XCTest
 final class CellMarkingTests: XCTestCase {
     
     func testCellMarking() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         XCTAssertNil(game.mark(for: 3))
         game.markCell(at: 3)
         XCTAssertEqual(game.mark(for: 3), .cross)
     }
     
     func testCellMarkingSwitchesCurrentPlayer() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.markCell(at: 3)
         XCTAssertEqual(game.mark(for: 3), .cross)
         game.markCell(at: 1)
@@ -19,7 +19,7 @@ final class CellMarkingTests: XCTestCase {
     }
     
     func testCellMarkingAlreadyMarkedCell() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.markCell(at: 3)
         XCTAssertEqual(game.mark(for: 3), .cross)
         game.markCell(at: 3)
@@ -27,7 +27,7 @@ final class CellMarkingTests: XCTestCase {
     }
     
     func testCellMarkingChecksVictoryPatterns() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             1,1,0,
             0,2,0,
@@ -39,7 +39,7 @@ final class CellMarkingTests: XCTestCase {
     }
     
     func testCellMarkingEndsGameIfBoardIsFull() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             1,2,0,
             2,2,1,

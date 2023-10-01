@@ -4,7 +4,7 @@ import XCTest
 final class VictoryConditionsTests: XCTestCase {
     
     func testCrossWinPartialBoard() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             1,1,1,
             0,2,0,
@@ -15,7 +15,7 @@ final class VictoryConditionsTests: XCTestCase {
     }
     
     func testCircleWinPartialBoard() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             1,1,2,
             0,2,0,
@@ -26,7 +26,7 @@ final class VictoryConditionsTests: XCTestCase {
     }
     
     func testCrossWinFullBoard() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             1,1,1,
             1,2,2,
@@ -37,7 +37,7 @@ final class VictoryConditionsTests: XCTestCase {
     }
     
     func testCircleWinFullBoard() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             1,1,2,
             1,2,2,
@@ -48,7 +48,7 @@ final class VictoryConditionsTests: XCTestCase {
     }
     
     func testNoWinnerFullBoard() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             2,1,2,
             2,1,1,
@@ -60,7 +60,7 @@ final class VictoryConditionsTests: XCTestCase {
     
     // We don't stop/care for this happening but still helps us validate that the win logic is self contained.
     func testBothWinningFullBoard() {
-        let game = GameViewModel()
+        let game = GameViewModel(storage: InMemoryStorage())
         game.boardState = [
             1,2,2,
             1,2,1,
