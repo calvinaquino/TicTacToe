@@ -28,6 +28,7 @@
 		984239B22AC8FE82009E8D7D /* InMemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */; };
 		984239B52AC90189009E8D7D /* PillButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B42AC90189009E8D7D /* PillButtonStyle.swift */; };
 		984239B72AC90382009E8D7D /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B62AC90382009E8D7D /* ScoreView.swift */; };
+		984239BA2AC90430009E8D7D /* GridCellStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B92AC90430009E8D7D /* GridCellStyleModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryStorage.swift; sourceTree = "<group>"; };
 		984239B42AC90189009E8D7D /* PillButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButtonStyle.swift; sourceTree = "<group>"; };
 		984239B62AC90382009E8D7D /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		984239B92AC90430009E8D7D /* GridCellStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellStyleModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				984239772AC8E35C009E8D7D /* TicTacToeJobberApp.swift */,
 				984239792AC8E35C009E8D7D /* ContentView.swift */,
 				984239902AC8ECAA009E8D7D /* Constants.swift */,
+				984239B82AC90424009E8D7D /* Modifiers */,
 				984239B32AC9017C009E8D7D /* Button Styles */,
 				984239A72AC8FB7C009E8D7D /* Extensions */,
 				9842398B2AC8EA6E009E8D7D /* Models */,
@@ -183,6 +186,14 @@
 				984239B42AC90189009E8D7D /* PillButtonStyle.swift */,
 			);
 			path = "Button Styles";
+			sourceTree = "<group>";
+		};
+		984239B82AC90424009E8D7D /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				984239B92AC90430009E8D7D /* GridCellStyleModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9842398D2AC8EA7C009E8D7D /* Mark.swift in Sources */,
+				984239BA2AC90430009E8D7D /* GridCellStyleModifier.swift in Sources */,
 				984239A92AC8FB87009E8D7D /* Leaderboard+Mark.swift in Sources */,
 				984239A62AC8FB55009E8D7D /* Leaderboard.swift in Sources */,
 				9842397A2AC8E35C009E8D7D /* ContentView.swift in Sources */,

@@ -33,3 +33,9 @@ extension Constants {
         [0, 4, 8] // diagonal top left to bottom right
     ]
 }
+
+// MARK: - Layout
+
+extension Constants {
+    static let gridSpacing: CGFloat = 10
+}
