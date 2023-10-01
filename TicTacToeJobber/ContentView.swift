@@ -35,6 +35,8 @@ struct ContentView: View {
         } label: {
             Text("Restart")
         }
+        .buttonStyle(PillButtonStyle())
+        .padding()
         .onChange(of: scenePhase) { newPhase in
             // Save the game state on background
             if newPhase == .background {

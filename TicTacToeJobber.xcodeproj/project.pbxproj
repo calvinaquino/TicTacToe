@@ -26,6 +26,7 @@
 		984239AD2AC8FD9A009E8D7D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239AC2AC8FD9A009E8D7D /* Storage.swift */; };
 		984239AF2AC8FE63009E8D7D /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239AE2AC8FE63009E8D7D /* StorageTests.swift */; };
 		984239B22AC8FE82009E8D7D /* InMemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */; };
+		984239B52AC90189009E8D7D /* PillButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B42AC90189009E8D7D /* PillButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		984239AC2AC8FD9A009E8D7D /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		984239AE2AC8FE63009E8D7D /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 		984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryStorage.swift; sourceTree = "<group>"; };
+		984239B42AC90189009E8D7D /* PillButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				984239772AC8E35C009E8D7D /* TicTacToeJobberApp.swift */,
 				984239792AC8E35C009E8D7D /* ContentView.swift */,
 				984239902AC8ECAA009E8D7D /* Constants.swift */,
+				984239B32AC9017C009E8D7D /* Button Styles */,
 				984239A72AC8FB7C009E8D7D /* Extensions */,
 				9842398B2AC8EA6E009E8D7D /* Models */,
 				984239882AC8EA31009E8D7D /* Views */,
@@ -169,6 +172,14 @@
 				984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		984239B32AC9017C009E8D7D /* Button Styles */ = {
+			isa = PBXGroup;
+			children = (
+				984239B42AC90189009E8D7D /* PillButtonStyle.swift */,
+			);
+			path = "Button Styles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 				984239A92AC8FB87009E8D7D /* Leaderboard+Mark.swift in Sources */,
 				984239A62AC8FB55009E8D7D /* Leaderboard.swift in Sources */,
 				9842397A2AC8E35C009E8D7D /* ContentView.swift in Sources */,
+				984239B52AC90189009E8D7D /* PillButtonStyle.swift in Sources */,
 				984239782AC8E35C009E8D7D /* TicTacToeJobberApp.swift in Sources */,
 				9842398F2AC8EB3F009E8D7D /* GameViewModel.swift in Sources */,
 				9842398A2AC8EA43009E8D7D /* CellView.swift in Sources */,
