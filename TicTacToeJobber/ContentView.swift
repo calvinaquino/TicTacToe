@@ -13,8 +13,21 @@ struct ContentView: View {
         LazyVGrid(columns: columns) {
             ForEach(Constants.boardRange, id: \.self) { index in
                 CellView(mark: gameViewModel.mark(for: index))
+                    .frame(width: 100, height: 100)
+                    .background(Color.teal)
+                    .onTapGesture {
+                        onCellTap(index: index)
+                    }
             }
         }
+    }
+}
+
+// MARK: - Private functions
+
+private extension ContentView {
+    func onCellTap(index: Int) {
+        gameViewModel.markCell(at: index)
     }
 }
 

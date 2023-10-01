@@ -10,7 +10,7 @@ A basic TicTacToe App with leaderboard.
 
 ## TODO:
 - [x] board state
-- [ ] marking
-- [ ] leaderboard
+- [x] marking
 - [ ] reseting the board
+- [ ] leaderboard
 - [ ] Persist between app sessions
