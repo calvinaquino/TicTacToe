@@ -2,6 +2,8 @@ import Foundation
 
 /// Manages game logic and flow
 class GameViewModel: ObservableObject {
+    /// Keeps track of players scores
+    var leaderboard = Leaderboard()
     /// The current player. If nil, there is no game ongoing.
     var currentPlayer: Mark? = .cross
     /// The winner for the last round. If nil and there is a currentPlayer, then there is a game ongoing
@@ -68,6 +70,7 @@ extension GameViewModel {
         let victorious = checkVictoryConditions(for: currentPlayer)
         if victorious {
             winner = currentPlayer
+            leaderboard.incrementVictoriesFor(currentPlayer)
             self.currentPlayer = nil
         } else if boardFullyMarked {
             self.currentPlayer = nil

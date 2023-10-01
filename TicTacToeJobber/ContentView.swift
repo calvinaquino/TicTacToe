@@ -10,6 +10,11 @@ struct ContentView: View {
     @ObservedObject private var gameViewModel = GameViewModel()
     
     var body: some View {
+        HStack {
+            Label("\(gameViewModel.leaderboard.cross)", systemImage: Mark.cross.asImageResourceString)
+            Spacer()
+            Label("\(gameViewModel.leaderboard.circle)", systemImage: Mark.cirle.asImageResourceString)
+        }
         StatusMessageView(
             currentPlayer: gameViewModel.currentPlayer,
             winner: gameViewModel.winner
