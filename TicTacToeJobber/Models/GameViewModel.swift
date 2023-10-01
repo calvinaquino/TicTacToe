@@ -14,6 +14,11 @@ class GameViewModel: ObservableObject {
 // MARK: - State checking functions
 
 extension GameViewModel {
+    /// Returns `True` if all indexes are marked.
+    var boardFullyMarked: Bool {
+        // if all indexes dont have a 0 value, the entire board was marked.
+        boardState.allSatisfy { $0 != 0 }
+    }
     /// Validates whether the `player` has a victory pattern in the current board.
     func checkVictoryConditions(for player: Mark) -> Bool {
         let playerNumber = player.rawValue
@@ -68,7 +73,7 @@ extension GameViewModel {
         if victorious {
             winner = currentPlayer
             self.currentPlayer = nil
-        } else if boardState.allSatisfy({ $0 != 0 }) {
+        } else if boardFullyMarked {
             self.currentPlayer = nil
             // DRAW
         } else {
