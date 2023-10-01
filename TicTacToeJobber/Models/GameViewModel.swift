@@ -22,6 +22,7 @@ class GameViewModel: ObservableObject {
         self.leaderboard = storage.loadLeaderboard()
         self.currentPlayer = storage.loadCurrentPlayer()
         self.boardState = storage.loadBoardState()
+        checkVictoryStateOnLoad()
     }
 }
 
@@ -47,6 +48,16 @@ extension GameViewModel {
         }
         
         return patternMatched
+    }
+    
+    /// Used to correctly assign a winner upon loading the game state on a new session.
+    /// This is so the message system can present the right message with a valid winner object, or leaving it nil if noone actually won.
+    func checkVictoryStateOnLoad() {
+        if checkVictoryConditions(for: .cross) {
+            winner = .cross
+        } else if checkVictoryConditions(for: .cirle) {
+            winner = .cirle
+        }
     }
 }
 
