@@ -27,6 +27,7 @@
 		984239AF2AC8FE63009E8D7D /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239AE2AC8FE63009E8D7D /* StorageTests.swift */; };
 		984239B22AC8FE82009E8D7D /* InMemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */; };
 		984239B52AC90189009E8D7D /* PillButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B42AC90189009E8D7D /* PillButtonStyle.swift */; };
+		984239B72AC90382009E8D7D /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239B62AC90382009E8D7D /* ScoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		984239AE2AC8FE63009E8D7D /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 		984239B12AC8FE82009E8D7D /* InMemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryStorage.swift; sourceTree = "<group>"; };
 		984239B42AC90189009E8D7D /* PillButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButtonStyle.swift; sourceTree = "<group>"; };
+		984239B62AC90382009E8D7D /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				984239892AC8EA43009E8D7D /* CellView.swift */,
 				984239A32AC8F9BC009E8D7D /* StatusMessageView.swift */,
+				984239B62AC90382009E8D7D /* ScoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				984239A62AC8FB55009E8D7D /* Leaderboard.swift in Sources */,
 				9842397A2AC8E35C009E8D7D /* ContentView.swift in Sources */,
 				984239B52AC90189009E8D7D /* PillButtonStyle.swift in Sources */,
+				984239B72AC90382009E8D7D /* ScoreView.swift in Sources */,
 				984239782AC8E35C009E8D7D /* TicTacToeJobberApp.swift in Sources */,
 				9842398F2AC8EB3F009E8D7D /* GameViewModel.swift in Sources */,
 				9842398A2AC8EA43009E8D7D /* CellView.swift in Sources */,

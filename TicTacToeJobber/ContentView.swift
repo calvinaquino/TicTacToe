@@ -12,14 +12,16 @@ struct ContentView: View {
     
     var body: some View {
         HStack {
-            Label("\(gameViewModel.leaderboard.cross)", systemImage: Mark.cross.asImageResourceString)
+            ScoreView(mark: .cross, score: gameViewModel.leaderboard.cross)
             Spacer()
-            Label("\(gameViewModel.leaderboard.circle)", systemImage: Mark.cirle.asImageResourceString)
+            ScoreView(mark: .cirle, score: gameViewModel.leaderboard.circle)
         }
+        .padding(.horizontal)
         StatusMessageView(
             currentPlayer: gameViewModel.currentPlayer,
             winner: gameViewModel.winner
         )
+        .padding()
         LazyVGrid(columns: columns) {
             ForEach(Constants.boardRange, id: \.self) { index in
                 CellView(mark: gameViewModel.mark(for: index))
