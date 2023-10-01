@@ -11,6 +11,8 @@ A basic TicTacToe App with leaderboard.
 ## TODO:
 - [x] board state
 - [x] marking
-- [ ] reseting the board
+- [x] reseting the board
+- [ ] winning conditions
 - [ ] leaderboard
 - [ ] Persist between app sessions
+- [ ] Improve UI

@@ -43,4 +43,10 @@ extension GameViewModel {
         // toggle turn
         self.currentPlayer = currentPlayer == .cirle ? .cross : .cirle
     }
+    
+    /// Reinitlailzies the `boardState` with zeroes and assigns the `currentPlayer` to `cross`.
+    func reset() {
+        boardState = Array(repeating: 0, count: 9)
+        currentPlayer = .cross
+    }
 }

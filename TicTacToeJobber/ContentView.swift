@@ -20,6 +20,11 @@ struct ContentView: View {
                     }
             }
         }
+        Button {
+            gameViewModel.reset()
+        } label: {
+            Text("Restart")
+        }
     }
 }
 
