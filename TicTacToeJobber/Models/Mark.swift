@@ -1,6 +1,10 @@
 import Foundation
 
 /// Represents a cross or a circle.
+/// Also used to represent a Player
+///
+/// Because of the simplistic approach for game logic in a tic tac toe game, we can use a single type to represent a cell state, a player, a turn, etc.
+/// as they are all related
 enum Mark: Int {
     case cross = 1 // goes first for now
     case cirle = 2
