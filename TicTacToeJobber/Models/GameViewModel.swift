@@ -4,8 +4,31 @@ import Foundation
 class GameViewModel: ObservableObject {
     /// The current player. If nil, there is no game ongoing.
     var currentPlayer: Mark? = .cross
+    /// The winner for the last round. If nil and there is a currentPlayer, then there is a game ongoing
+    /// If there isn't a currentPlayer, there isn't a game ongoing, and the last game was a draw.
+    var winner: Mark? = nil
     /// The storage for all the marked indexes of the board. Has a size of 9
     @Published var boardState: [Int] = Array(repeating: 0, count: Constants.boardRange.count)
+}
+
+// MARK: - State checking functions
+
+extension GameViewModel {
+    /// Validates whether the `player` has a victory pattern in the current board.
+    func checkVictoryConditions(for player: Mark) -> Bool {
+        let playerNumber = player.rawValue
+        var patternMatched = false
+        for pattern in Constants.victoryPatterns {
+            patternMatched = pattern.allSatisfy { index in
+                boardState[index] == playerNumber
+            }
+            if patternMatched {
+                break
+            }
+        }
+        
+        return patternMatched
+    }
 }
 
 // MARK: - Game flow
@@ -40,8 +63,18 @@ extension GameViewModel {
             boardState[index] = 2
         }
         
-        // toggle turn
-        self.currentPlayer = currentPlayer == .cirle ? .cross : .cirle
+        // toggle turn if there are still empty cells, else mark as finished
+        let victorious = checkVictoryConditions(for: currentPlayer)
+        if victorious {
+            winner = currentPlayer
+            self.currentPlayer = nil
+        } else if boardState.allSatisfy({ $0 != 0 }) {
+            self.currentPlayer = nil
+            // DRAW
+        } else {
+            // if turn was circle, switch to cross and vice versa
+            self.currentPlayer = currentPlayer == .cirle ? .cross : .cirle
+        }
     }
     
     /// Reinitlailzies the `boardState` with zeroes and assigns the `currentPlayer` to `cross`.
