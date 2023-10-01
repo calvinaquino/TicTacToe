@@ -19,6 +19,7 @@
 		984239992AC8F199009E8D7D /* CellMarkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239982AC8F199009E8D7D /* CellMarkingTests.swift */; };
 		984239A02AC8F3C8009E8D7D /* BoardStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842399F2AC8F3C8009E8D7D /* BoardStateTests.swift */; };
 		984239A22AC8F61D009E8D7D /* VictoryConditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239A12AC8F61D009E8D7D /* VictoryConditionsTests.swift */; };
+		984239A42AC8F9BC009E8D7D /* StatusMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984239A32AC8F9BC009E8D7D /* StatusMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		984239982AC8F199009E8D7D /* CellMarkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMarkingTests.swift; sourceTree = "<group>"; };
 		9842399F2AC8F3C8009E8D7D /* BoardStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardStateTests.swift; sourceTree = "<group>"; };
 		984239A12AC8F61D009E8D7D /* VictoryConditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VictoryConditionsTests.swift; sourceTree = "<group>"; };
+		984239A32AC8F9BC009E8D7D /* StatusMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				984239892AC8EA43009E8D7D /* CellView.swift */,
+				984239A32AC8F9BC009E8D7D /* StatusMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				9842398F2AC8EB3F009E8D7D /* GameViewModel.swift in Sources */,
 				9842398A2AC8EA43009E8D7D /* CellView.swift in Sources */,
 				984239912AC8ECAA009E8D7D /* Constants.swift in Sources */,
+				984239A42AC8F9BC009E8D7D /* StatusMessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

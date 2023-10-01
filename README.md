@@ -13,7 +13,7 @@ A basic TicTacToe App with leaderboard.
 - [x] marking
 - [x] reseting the board
 - [x] winning conditions
-- [ ] game messages
+- [x] game messages
 - [ ] leaderboard
 - [ ] Persist between app sessions
 - [ ] Improve UI

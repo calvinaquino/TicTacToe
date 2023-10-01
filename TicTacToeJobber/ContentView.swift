@@ -10,6 +10,10 @@ struct ContentView: View {
     @ObservedObject private var gameViewModel = GameViewModel()
     
     var body: some View {
+        StatusMessageView(
+            currentPlayer: gameViewModel.currentPlayer,
+            winner: gameViewModel.winner
+        )
         LazyVGrid(columns: columns) {
             ForEach(Constants.boardRange, id: \.self) { index in
                 CellView(mark: gameViewModel.mark(for: index))
