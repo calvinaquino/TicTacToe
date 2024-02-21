@@ -1,4 +1,4 @@
-# TicTacToeJobber
+# TicTacToe
 
 A basic TicTacToe App, with leaderboard and data persistence between app sessions.
 
